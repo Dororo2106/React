@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Rect, Circle, TextInput, SafeAreaView, React,Button , html, ImageBackground} from 'react-native';
 import img from "./assets/Logo.png";
-import  "./estilo.css";
+import  './estilo.css';
 import imagen from "./assets/fondo.png";
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
           source={img}
           style={styles.Image}
         />
-
+        
         </View>
 
 
