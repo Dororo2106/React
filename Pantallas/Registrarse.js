@@ -1,50 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useEffect, useState} from 'react'
 import { StyleSheet, Text, View, Image, TextInput, SafeAreaView,Button, ImageBackground} from 'react-native';
-import img from '../Pantallas/Logo.png';
-import imagen from '../assets/fondo.png';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Regis from './Registrarse';
 
-function Inicio()
+function Regis({navigate})
 {
-  return(
-
-    <View style={styles.container}>
-    <StatusBar style="auto" />
-
-  <Image
-    source={imagen}
-    style={styles.imagen}
-  />
+    return( 
 
 
-  <button id="botonR" type="button" style={styles.boton1}  onClick={() => navigation.navigate(Regis)}
->
-      <text>Registrarse</text>
-
-  </button>
-
-  <button id="botonIS" type="button" style={styles.boton2}>
-      <text>Iniciar Sesión</text>
-  </button>
+      <View style={styles.container}>
+        <Button 
+          
+        />
+      </View> 
+    )
 
 
-<html>
-    <div id="circulo" style={styles.circulo} > </div>
-</html>    
-
-
-
-<Image
-  source={img}
-  style={styles.Image}
-/>
-  
-  
-  </View>
-  )
 }
 
 const styles = StyleSheet.create({
@@ -53,9 +25,10 @@ const styles = StyleSheet.create({
       padding: 450,
       flexDirection:"column",
       flex: 1,
-      backgroundColor: '#010B1C',
+      backgroundColor: '#EEC3FF',
       alignItems:"center",
-      justifyContent: "center"
+      justifyContent: "center",
+      position:"absolute"
     },
     title:
     {
@@ -79,12 +52,12 @@ const styles = StyleSheet.create({
     boton1: {
       border : -2,
       width: 200,  
-      borderColor: "#EEC3FF",
+      borderColor: "#ffffff",
       lineHeight: -25,
       padding:10,
       fontSize: 18,
       textAlign: "center",
-      color:"#EEC3FF",
+      color:"#ffffff",
       borderRadius: 30,
       marginBottom: -110,
       backgroundColor:"transparent",
@@ -101,13 +74,13 @@ const styles = StyleSheet.create({
       color:"#004290",
       borderRadius: 30,
       marginBottom: -10,
-      backgroundColor:"#EEC3FF",
+      backgroundColor:"white",
       position:"absolute"
     },
     circulo:{
       height:150,
       width:150,
-      backgroundColor:"#EEC3FF",
+      backgroundColor:"white",
       borderRadius:100,
       margin:210,
       marginTop:-208,
@@ -116,4 +89,4 @@ const styles = StyleSheet.create({
    
   });
 
-  export default Inicio
+  export default Regis
