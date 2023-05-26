@@ -3,20 +3,36 @@ import React, {useEffect, useState} from 'react'
 import { StyleSheet, Text, View, Image, TextInput, SafeAreaView,Button, ImageBackground} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
-function Regis({navigate})
-{
+
+class Regis extends React.Component {
+  render() {
+
     return( 
-
-
       <View style={styles.container}>
-        <Button 
-          
-        />
+ 
+      <div style={styles.title}>
+      <h1>Registrarse</h1>
+      <TextField id="Nombre" label="Nombre" variant="outlined" fullWidth  margin="normal"  />
+      <TextField id="Correo" label="Correo" variant="outlined" fullWidth  margin="normal" />
+      <TextField id="Contraseña" label="Contraseña" variant="outlined" fullWidth  margin="normal" />
+      <TextField id="CContraseña" label="Confirmar Contraseña" variant="outlined" fullWidth  margin="normal" />
+
+
+ </div>
+ <button id="botonR" type="button" style={styles.boton1}  >
+      <text>Registrarse</text>
+
+  </button>
+
+
       </View> 
     )
 
 
+}
 }
 
 const styles = StyleSheet.create({
@@ -25,67 +41,37 @@ const styles = StyleSheet.create({
       padding: 450,
       flexDirection:"column",
       flex: 1,
-      backgroundColor: '#EEC3FF',
+      backgroundColor: '#E8EDE7',
       alignItems:"center",
       justifyContent: "center",
-      position:"absolute"
     },
     title:
     {
-      color: "#2C3E50" ,
+      color: "#000000" ,
       fontStyle: "italic",
-      fontSize: 60
-    },
-    Image:
-    {
-      width:150,
-      height: 150,
-      top:-207,
-      position: "relative"
-  
-    },
-    imagen: {
-      width:450,
-      height: 950,
-      position:"absolute"
+      fontSize: 36,
+      fontFamily: 'Monospace',
+      margin: 140
     },
     boton1: {
       border : -2,
-      width: 200,  
-      borderColor: "#ffffff",
+      width: 250,  
+      borderColor: "#085483",
       lineHeight: -25,
       padding:10,
       fontSize: 18,
       textAlign: "center",
-      color:"#ffffff",
+      color:"#FFFFFF  ",
       borderRadius: 30,
-      marginBottom: -110,
-      backgroundColor:"transparent",
+      marginBottom: -640,
+      backgroundColor:"#085483",
       position:"absolute",
-    },
-    boton2: {
-      border : -2,
-      width: 200,  
-      borderColor: "#004290",
-      lineHeight: -25,
-      padding:10,
-      fontSize: 18,
-      textAlign: "center",
-      color:"#004290",
-      borderRadius: 30,
-      marginBottom: -10,
-      backgroundColor:"white",
-      position:"absolute"
-    },
-    circulo:{
-      height:150,
-      width:150,
-      backgroundColor:"white",
-      borderRadius:100,
-      margin:210,
-      marginTop:-208,
-      position: "relative"
+    
+      
     }
+ 
+
+
    
   });
 

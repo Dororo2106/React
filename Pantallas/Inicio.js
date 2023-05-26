@@ -5,10 +5,12 @@ import img from '../Pantallas/Logo.png';
 import imagen from '../assets/fondo.png';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Regis from './Registrarse';
+//import Regis from './Registrarse.js';
 
-function Inicio()
-{
+
+class Inicio extends React.Component {
+  render() {
+
   return(
 
     <View style={styles.container}>
@@ -19,14 +21,20 @@ function Inicio()
     style={styles.imagen}
   />
 
+<Button
+          title="Add some friends"
+          onPress={() =>
+            this.props.navigation.navigate('Registrarse')
+          }
+        />
 
-  <button id="botonR" type="button" style={styles.boton1}  onClick={() => navigation.navigate(Regis)}
->
+
+  <button id="botonR" type="button" style={styles.boton1}  onPress={() =>  this.props.navigation.navigate('Registrarse')}
+>     
       <text>Registrarse</text>
-
   </button>
 
-  <button id="botonIS" type="button" style={styles.boton2}>
+  <button id="botonIS" type="button" style={styles.boton2} >
       <text>Iniciar Sesión</text>
   </button>
 
@@ -36,15 +44,15 @@ function Inicio()
 </html>    
 
 
-
 <Image
   source={img}
   style={styles.Image}
 />
-  
-  
+
+
   </View>
   )
+}
 }
 
 const styles = StyleSheet.create({
@@ -116,4 +124,5 @@ const styles = StyleSheet.create({
    
   });
 
+  
   export default Inicio
